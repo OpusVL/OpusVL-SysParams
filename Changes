@@ -2,6 +2,10 @@ Revision history for OpusVL-SysParams
 
 {{ $NEXT }}
 
+0.17      2016-12-22 07:41:17+00:00 Europe/London
+
+        Ensure we have a sufficient version of perl for the module to work
+
 0.16      2016-12-21 09:00:14+00:00 Europe/London
 
         Made less likely to crash when no type was in historical data.
