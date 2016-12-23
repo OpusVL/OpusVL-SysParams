@@ -1,5 +1,5 @@
 requires "Config::JFDI" => "0";
-requires "DBIx::Class::Core" => "0";
+requires "DBIx::Class" => "0";
 requires "DBIx::Class::ResultSet" => "0";
 requires "DBIx::Class::Schema" => "0";
 requires "Data::Munge" => "0";
