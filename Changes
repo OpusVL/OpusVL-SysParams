@@ -2,6 +2,10 @@ Revision history for OpusVL-SysParams
 
 {{ $NEXT }}
 
+0.19      2017-01-03 12:17:38+00:00 Europe/London
+
+        Updated version of MooseX::NonMoose to prevent spurious failures
+
 0.18      2016-12-23 05:47:48+00:00 Europe/London
 
         Make DBIx::Class dependency clearer
