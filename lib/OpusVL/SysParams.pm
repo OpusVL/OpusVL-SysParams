@@ -84,6 +84,8 @@ C<$name> - the name of the system parameter
 
 C<$default_sub> - A CODEREF returning the default value.  C<$params> (your instance of L<OpusVL::SysParams>) is passed as the first argument.
 
+C<$type> - We will try to determine the type from your C<$default_sub>, but if it's unclear, you may wish to be explicit here.
+
 Example:
 
    $params->get_or_set('partner.titles', sub { 'Mr|Mrs|Miss|Mx' });
@@ -91,13 +93,13 @@ Example:
 =cut
 
 sub get_or_set {
-    my ($self, $name, $default_sub) = @_;
+    my ($self, $name, $default_sub, $type) = @_;
     if (elem $name, [$self->key_names]) {
         return $self->get($name);
     }
     else {
         my $value = $default_sub->($self);
-        $self->set($name, $value);
+        $self->set($name, $value, $type);
         return $value;
     }
 }
