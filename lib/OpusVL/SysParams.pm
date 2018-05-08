@@ -23,6 +23,21 @@ has 'schema' => (isa => 'DBIx::Class::Schema', is => 'ro', required => 1,
 
 # ABSTRACT: Module to handle system wide parameters
 
+has short_name => (
+    is => 'rw',
+    lazy => 1,
+    default => 'sysparams',
+);
+
+with 'OpusVL::FB11::Role::Brain';
+
+sub hats {
+    (
+        sysparams => {
+            class => 'sysparams::is_brain'
+        }
+    )
+}
 
 our $VERSION = '0.21';
 
@@ -30,7 +45,6 @@ our $VERSION = '0.21';
 =head1 SYNOPSIS
 
 This module handles system wide parameters.
-
 
     use OpusVL::SysParams;
 
