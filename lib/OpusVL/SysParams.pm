@@ -39,6 +39,10 @@ sub hats {
     )
 }
 
+sub provided_services {
+    qw/sysparams/
+}
+
 our $VERSION = '0.21';
 
 
